@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+<!--
+
+DEMO created by http://panaghia.it [sergio panagia]
+
+MIT STYLE LICENSE
+
+-->
+
+	<title>Content Impress Demo: On Hover | Panaghia</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" media="screen" href="../content-impress/style.css" />
+	<script type="text/javascript" src="lib/core.js"></script>
+	<script type="text/javascript" src="lib/more.js"></script>
+	<script type="text/javascript" src="../../Source/impress.js"></script>
+	
+	<script>
+	var impress;
+	window.addEvent('domready', function()
+	{
+		impress = new Impress({
+			opacity: .9,
+			color: '#333',
+			onHover: true,
+			toImpressOnHover: $$('.impress')
+		});
+		
+		$(document.body).addEvent('keydown', function(e)
+		{
+			if(e.key == 'esc')
+			{
+				e.stop();
+				impress.activateOnHover(false);
+			}
+		});	
+		
+		
+		//GO TO HOMEPAGE
+		document.id('logo').addEvent('click', function()
+		{
+			location.href="http://panaghia.it";
+		});
+				
+	});
+	
+	
+	
+	</script>
+	
+</head>
+
+<body>
+	<div id="wrap">
+		<div id="head"> <h1>Impress Demo: On Hover</h1>
+		<div id="logo"></div>
+		</div>
+		<div id="leftSide">
+			<div class="inside">
+				<span><a href="#">list</a></span>
+				<span><a href="#">list</a></span>
+				<span><a href="#">list</a></span>
+				<span><a href="#">list</a></span>
+			</div>
+		</div>
+		<div id="content">
+			<div class="inside impress">				
+			
+			<h2>Just hover mouse here or in the right side menu<br/>Press 'esc' key to disable</h2>
+			
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut augue mi, eu fermentum dolor. Nunc id turpis nulla, non vestibulum felis. Sed sed suscipit nibh. Ut diam sapien, consectetur vel volutpat in, dictum non mi. Suspendisse potenti. Nulla at odio ligula, et mollis odio. Ut semper posuere nibh ac mattis. Suspendisse ipsum ipsum, mollis in cursus sed, ullamcorper a lorem. Donec tempus, erat porttitor egestas blandit, odio libero rutrum enim, sit amet congue massa nisi id diam. Maecenas erat odio, condimentum et bibendum eu, euismod eu est. Cras cursus, tellus non congue ornare, tortor nunc tempor elit, viverra hendrerit mi dolor id tellus. Mauris nec lobortis lorem.</p>
+
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum vitae nunc leo. Morbi bibendum ligula id lectus scelerisque a interdum odio dignissim. In id purus a orci ultrices venenatis. Nullam erat erat, malesuada sit amet convallis vel, ultrices non augue. Ut cursus quam eu sapien auctor vestibulum. Aliquam gravida orci eget enim rutrum volutpat. Nullam eu dolor euismod massa tristique lobortis. Curabitur cursus ullamcorper mi, vel auctor enim interdum at. Nam vel lorem ac lorem congue sodales. Ut congue turpis et turpis sodales dictum. Fusce bibendum augue a enim posuere volutpat consectetur diam euismod. Donec eu turpis ut felis egestas consequat. Maecenas nec rhoncus nulla.
+</p><p>Nam sit amet arcu massa, quis euismod est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean luctus auctor tincidunt. Integer hendrerit lorem non lectus viverra non gravida mi congue. Nulla id aliquet risus. In non iaculis felis. Duis ut mattis risus. Proin dignissim leo in libero scelerisque a fringilla enim fringilla. Sed quis diam et turpis accumsan tincidunt. Aliquam ac ante vitae dui hendrerit bibendum et sit amet leo. Maecenas elit dui, facilisis sit amet posuere sed, ultrices in est. Proin placerat sagittis viverra. In pretium, sapien eu ullamcorper ornare, neque sem tristique enim, et porta nisi mi sed orci.</p>
+
+<p>Integer sit amet mauris id ligula vehicula porta. Morbi sed lectus eros, sit amet tristique dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras ultrices, eros eu accumsan tincidunt, nisl elit sagittis nunc, at viverra nunc eros nec lorem. Suspendisse convallis metus at justo scelerisque tristique. Nam et massa nisi, quis lacinia nulla. Curabitur vitae mi lectus, eu auctor metus. Nullam lectus dolor, semper sed facilisis id, mattis quis ipsum. Nulla erat leo, lacinia vel sodales ac, mattis ut justo. Proin ut nisi eget velit molestie porttitor. Aenean elit mauris, interdum vitae aliquet non, fringilla eu quam. Aliquam erat volutpat. Suspendisse ultrices elit a ante gravida ut tincidunt est viverra. Maecenas vehicula orci eu est adipiscing in rhoncus quam lacinia. Phasellus mauris elit, aliquam sit amet consectetur sed, condimentum id risus. Maecenas lacus quam, laoreet eget ultrices sit amet, placerat suscipit sapien. In non diam eros, id pulvinar lorem. Vestibulum dolor quam, egestas vel dapibus vitae, dignissim vitae elit. Mauris dapibus ultricies sem ac ultricies. Integer iaculis risus id nulla aliquet quis scelerisque risus ultricies.</p>
+
+<p>Sed feugiat mauris eget nunc gravida ultricies vitae id nibh. Nam vitae magna ac metus dignissim auctor dapibus sed velit. Donec dignissim facilisis lorem, et viverra lectus interdum sed. Aliquam auctor aliquet malesuada. Ut tortor nulla, porta sed vehicula nec, euismod ac est. Curabitur mi mauris, dignissim a tempor vel, vehicula nec augue. Mauris urna nisi, dapibus varius luctus sed, laoreet ut elit. Fusce quam elit, dictum ac placerat vitae, tempor at nibh. Nam a felis lorem. Pellentesque pulvinar pellentesque risus. Quisque sit amet pretium urna. Praesent pellentesque lacus vitae elit rhoncus viverra. Phasellus blandit ornare dignissim. Nullam elementum arcu pharetra justo mollis sed ultricies lectus interdum. Curabitur a tortor at purus suscipit viverra accumsan sed enim. Quisque convallis interdum leo. Proin non est sit amet nibh fringilla bibendum vel et neque. Nam ac nisl arcu, tristique volutpat tellus. Aliquam ac dui tincidunt turpis accumsan luctus. Nulla a diam sed elit mattis accumsan.</p>
+				</div>
+		</div>
+		<div id="rightSide" class="impress">
+			<div class="inside">
+				<h3>About the author</h3>
+				<em>Da Wikipedia</em>
+				<p>Marco Tullio Cicerone (in latino: Marcus Tullius Cicero, IPA: 'markus 'tulːius 'kikeroː; in greco antico: Κικέρων, Kikérōn; Arpinum, 3 gennaio 106 a.C. – Formiae, 7 dicembre 43 a.C.) fu un celebre filosofo, avvocato e scrittore romano, nonché uomo politico dell'ultimo periodo della Repubblica Romana.</p>
+				<p>Esponente di un'agiata famiglia dell'ordine equestre, Cicerone fu una delle figure più rilevanti di tutta l'antichità romana.</p><p>La sua vastissima produzione letteraria, che va dalle orazioni politiche agli scritti di filosofia e retorica, oltre a offrire un prezioso ritratto della società romana negli ultimi travagliati anni della repubblica, rimase come esempio per tutti gli autori del I secolo a.C., tanto da poter essere considerata il prototipo della letteratura latina classica.</p><p>Attraverso l'opera di Cicerone, grande ammiratore della cultura greca, i Romani poterono anche acquisire una migliore conoscenza della filosofia.</p><p>Tra i suoi maggiori contributi alla cultura latina ci fu senza dubbio la creazione di un lessico filosofico latino: Cicerone si impegnò, infatti, a trovare il corrispondente vocabolo in latino per tutti i termini specifici del linguaggio filosofico greco.[1] Tra le opere fondamentali per la comprensione del mondo latino si collocano invece le Lettere (Epistulae, in particolar modo quelle all'amico Tito Pomponio Attico), che offrono numerosissime riflessioni su ogni avvenimento, permettendo di comprendere quali fossero le reali linee politiche dell'aristocrazia romana.</p>
+			</div>
+		</div>
+		<div id="footer">
+			&copy; <a href="http://panaghia.it" title="Sergio Panagia" >Sergio Panagia</a>
+		</div>
+	</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11057698-6");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+
+</html>

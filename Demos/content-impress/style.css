@@ -1,0 +1,153 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	color:#111;
+}
+
+h2
+{
+	font-size:140%;
+}
+
+p
+{
+	line-height:1.3;
+	margin-bottom:15px;
+}
+
+#logo
+{
+	position: absolute;
+	top:5px;
+	right:0px;
+	background-image: url('/imgs/panaghia_logo_small.png');
+	background-repeat: no-repeat;
+	width:282px;
+	height:30px;
+	z-index:3;
+	cursor: pointer;
+}
+
+input[type="button"]
+{
+	position: relative;
+	padding:5px;
+	border:1px solid #999;
+	background-color:#eee;
+	box-shadow:1px 1px 2px #999;
+	-webkit-box-shadow: 1px 1px 2px #999;
+	-moz-box-shadow:1px 1px 2px #999;
+	background-image: url('eye.png');
+	background-position: 5px center;
+	padding-left:25px;
+	min-height:20px;
+	background-repeat: no-repeat;
+	line-height: 1;
+	cursor: pointer;
+	margin-bottom:10px;
+}
+
+#wrap
+{
+	position: relative;
+	margin-right:5px;
+	background-color:#c0c0c0;
+}
+
+#head
+{
+	position:relative;
+	float:left;
+	width: 100%;
+	height:50px;
+	background-color:#555;
+	color:#fff;
+	text-align: left;
+	margin-bottom:10px;
+}
+
+#head h1
+{
+	position: relative;
+	text-align: left;
+	font-size:220%;
+	color:#eee;
+	text-shadow: -1px -1px 1px #111;
+	z-index:2;
+	margin-left:50px;
+	width:auto;
+}
+
+.inside
+{
+	padding-left:15px;
+}
+
+#leftSide
+{
+	position: relative;
+	width:15%;
+	min-height:200px;
+	height:100%;
+	background-color:#c0c0c0;
+	min-width:100px;
+	float:left;
+	visibility: visible;
+	display: block;
+	padding-top:5px;
+}
+
+#leftSide span
+{
+	display: block;
+}
+
+#content
+{
+	position: relative;
+	width:65%;
+	height:100%;
+	float:left;
+}
+
+#shw
+{
+	position: absolute;
+	top:0px;
+	width:100%;
+	height:10px;
+	background-color:#111;
+}
+
+#rightSide
+{
+	position: relative;
+	width:20%;
+	min-height:500px;
+	height:100%;
+	float:left;
+	background-color:#eee;
+	font-size:80%;
+}
+
+#footer
+{
+	position: relative;
+	width:100%;
+	min-height:50px;
+	float:left;
+	text-align: center;
+}
