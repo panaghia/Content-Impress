@@ -2,5 +2,6 @@ name: Content Impress
 author: panaghia
 category: Effects
 tags: [animation, usability, accessibility, read]
-demo: http://panaghia.it/2010/content-impress-a-web-content-highlight-class-for-mootools
+demo: http://panaghia.it/2010/content-impress-focus-user-attention-on-a-page-element
+docs: http://panaghia.it/doc/impress.html
 current: 0.1
