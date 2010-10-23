@@ -17,13 +17,6 @@ requires:
 
 provides: [Impress]
 
-version 0.1b
-
-updates from 0.1:
-	*fixed a minor bugs about body computed size
-	*fixed bug causing frame overlapping
-	*added z-index instance variable (zIndex)
-
 ...
 */
 
