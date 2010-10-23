@@ -17,6 +17,13 @@ requires:
 
 provides: [Impress]
 
+version 0.1b
+
+updates from 0.1:
+	*fixed a minor bugs about body computed size
+	*fixed bug causing frame overlapping
+	*added z-index instance variable (zIndex)
+
 ...
 */
 
@@ -28,7 +35,8 @@ var Impress = new Class(
 		opacity: .9,
 		onHover: false,
 		toImpressOnHover: [],
-		active: false
+		active: false,
+		zIndex: 999
 	},
 	initialize: function(options)
 	{
@@ -107,38 +115,40 @@ var Impress = new Class(
 			
 			//LEFT BLOCK
 			var leftWidth =  elPosx - 0;
-			var leftHeight = $(document.body).getSize().y;
+			var leftPosy = elPosy;
+			var leftHeight = this.getBodyHeight() - ( this.getBodyHeight() - elHeight) ;
+			
 			var leftPosx = 0;
-			var leftPosy = 0;
 			left.inject(document.body);
 			left.setStyles(
 			{
-				'position':'fixed',
+				'position':'absolute',
 				'top': leftPosy,
 				'left': leftPosx,
 				'width': leftWidth,
 				'height': leftHeight,
 				'backgroundColor': color,
 				'opacity': opacity,
-				'z-index': 999
+				'z-index': this.options.zIndex
 			});
 			
 			//RIGHT BLOCK
-			var rightWidth = $(document.body).getSize().x - elPosx + elWidth;
-			var rightHeight = $(document.body).getSize().y;
+			var rightWidth =  $(document.body).getComputedSize().width - (leftWidth + elWidth);
+
+			var rightHeight = leftHeight;
 			var rightPosx = elPosx + elWidth;
-			var rightPosy = 0;
+			var rightPosy = elPosy;
 			right.inject(document.body);
 			right.setStyles(
 			{
-				'position':'fixed',
+				'position':'absolute',
 				'top': rightPosy,
 				'left': rightPosx,
 				'width': rightWidth,
 				'height': rightHeight,
 				'backgroundColor': color,
 				'opacity': opacity,
-				'z-index': 999
+				'z-index': this.options.zIndex
 			});
 			
 			//TOP BLOCK
@@ -157,20 +167,16 @@ var Impress = new Class(
 				'height': topHeight,
 				'backgroundColor': color,
 				'opacity': opacity,
-				'z-index': 999
+				'z-index': this.options.zIndex
 			});
 					
 			//BOTTOM BLOCK
 			var bottomWidth = topWidth;
 			var bottomHeight = $(document.body).getSize().y - elPosy - elHeight;
 		
-			var D = document;
-			var bodyH = 
-			Math.max(
-			Math.max(D.body.scrollHeight, D.documentElement.scrollHeight),
-		Math.max(D.body.offsetHeight, D.documentElement.offsetHeight),
-		Math.max(D.body.clientHeight, D.documentElement.clientHeight)
-		);
+			
+			var bodyH = this.getBodyHeight();
+			
 		    		
 			var bottomHeight = bodyH - elPosy - elHeight;
 			
@@ -186,7 +192,7 @@ var Impress = new Class(
 				'height': bottomHeight,
 				'backgroundColor': color,
 				'opacity': opacity,
-				'z-index': 999
+				'z-index': this.options.zIndex
 			});
 			
 			$$('._impress_block_').addEvent('click', function()
@@ -214,5 +220,13 @@ var Impress = new Class(
 		});
 		$$('._impress_block_').fade('out');
 		this.fireEvent('close');		
+	},
+	getBodyHeight: function()
+	{
+		return Math.max(
+			Math.max(document.body.scrollHeight, document.documentElement.scrollHeight),
+		Math.max(document.body.offsetHeight, document.documentElement.offsetHeight),
+		Math.max(document.body.clientHeight, document.documentElement.clientHeight)
+		);
 	}
 });
