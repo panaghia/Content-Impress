@@ -87,7 +87,8 @@ var Impress = new Class(
 	},
 	toggle: function(el)
 	{
-		if(!this.options.active)
+		var bounds = $$('._impress_block_').length;
+		if(!this.options.active && !bounds)
 		{
 			var color = this.options.color;
 			var opacity = this.options.opacity;
@@ -199,19 +200,17 @@ var Impress = new Class(
 		else
 		{
 			this.removeBounds();
+			
 		}
 		this.options.active = !this.options.active;
-
+        
 	},
 	removeBounds: function()
-	{
-		$$('._impress_block_').set('tween', 
-		{
-			duration:500,
-			onComplete: $$('._impress_block_').destroy.bind(this)
-			
-		});
-		$$('._impress_block_').fade('out');
+	{                               
+		var blocks = $$('._impress_block_'); 
+		blocks.set('tween', {duration:500});
+		blocks.fade('out');
+		(function(){blocks.dispose();}).delay(500); 
 		this.fireEvent('close');		
 	},
 	getBodyHeight: function()
