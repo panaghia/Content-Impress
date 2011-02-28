@@ -8,7 +8,19 @@ How to use
 
 There are two main way of using this plugin:
 
-a) Activate by button
+a) Activate on Element
+	 
+	var el = document.id('element2Impress');
+	el.impress();
+	
+	/* or */  
+	
+	el.impress({
+		opacity: .5,
+		color: '#111'
+	});
+
+b) Activate by button
 
 	var impress = new Impress({
 			opacity: .9,
@@ -28,16 +40,6 @@ b) Activate on hover
 			toImpressOnHover: $$('.impress')
 		});
 
-c) Activate on Element
-	 
-	var el = document.id('element2Impress');
-	el.impress();
-	/* or */
-	el.impress({
-		opacity: .5,
-		color: '#111'
-	});
-		
 		
 Screenshots
 -----------
