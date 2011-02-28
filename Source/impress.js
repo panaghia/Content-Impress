@@ -222,4 +222,12 @@ var Impress = new Class(
 		Math.max(document.body.clientHeight, document.documentElement.clientHeight)
 		);
 	}
+});  
+
+Element.implement({
+	impress: function(options)
+	{                      
+		new Impress(options).toggle(this);
+		return this;
+	}	
 });
