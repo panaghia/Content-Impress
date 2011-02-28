@@ -27,10 +27,19 @@ b) Activate on hover
 			onHover: true,
 			toImpressOnHover: $$('.impress')
 		});
-		
+
+c) Activate on Element
+	 
+	var el = document.id('element2Impress');
+	el.impress();
+	/* or */
+	el.impress({
+		opacity: .5,
+		color: '#111'
+	});
 		
 		
 Screenshots
 -----------
 
-![Screenshot 1](http://panaghia.it/imgs/content-impress.png)
+![Screenshot 1](http://dl.dropbox.com/u/5138746/impress.jpg)
