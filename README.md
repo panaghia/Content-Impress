@@ -31,7 +31,7 @@ b) Activate by button
 			}
 		});
 
-b) Activate on hover
+c) Activate on hover
 
 	impress = new Impress({
 			opacity: .9,
